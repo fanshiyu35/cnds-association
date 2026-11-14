@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex">
+<title>ČNDS — Independent Transport Association of the Czech Republic</title>
+<meta name="description" content="ČNDS, the Independent Transport Association of the Czech Republic, founded 2005; biennial ČNDS International Award for Transport Research since 2006.">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: #f7f5ef; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #26292d; background: #f7f5ef; }
+a { color: #0d5f58; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar { background: #0d2b45; color: #c9d6e0; font-size: 12px; }
+.topbar .in { max-width: 1100px; margin: 0 auto; padding: 5px 16px; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.topbar .org { color: #e8eef3; }
+
+.masthead { background: #fbfaf6; border-bottom: 3px solid #1a7a6e; }
+.masthead .in { max-width: 1100px; margin: 0 auto; padding: 18px 16px 14px; display: flex; align-items: center; gap: 18px; }
+.masthead h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #0d2b45; letter-spacing: .5px; }
+.masthead .sub { font-size: 13px; color: #4a5560; margin-top: 2px; }
+.masthead .cz { font-style: italic; color: #1a7a6e; font-size: 14px; }
+
+nav.main { background: #0d2b45; border-top: 1px solid #1c4a74; }
+nav.main .in { max-width: 1100px; margin: 0 auto; padding: 0 8px; }
+nav.main ul { list-style: none; display: flex; flex-wrap: wrap; }
+nav.main a { display: block; color: #dfe7ee; font-size: 13.5px; padding: 11px 13px; letter-spacing: .3px; }
+nav.main a:hover { background: #143a5c; text-decoration: none; }
+nav.main a.active { background: #1a7a6e; color: #ffffff; }
+
+.routeband { background: #f7f5ef; border-bottom: 1px solid #d9d5c8; }
+.routeband svg { display: block; width: 100%; height: 40px; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 20px 16px 34px; }
+.crumbs { font-size: 12.5px; color: #6b7178; margin-bottom: 14px; }
+.crumbs a { color: #0d5f58; }
+
+.grid { display: flex; gap: 26px; align-items: flex-start; }
+.maincol { flex: 1 1 68%; min-width: 0; }
+.sidecol { flex: 1 1 30%; min-width: 0; }
+
+h1.page { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; color: #0d2b45; margin-bottom: 4px; }
+p.lede { color: #4a5560; font-size: 15.5px; margin-bottom: 18px; }
+h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 19px; color: #0d2b45; border-bottom: 2px solid #1a7a6e; padding-bottom: 5px; margin: 26px 0 12px; }
+h2.first { margin-top: 0; }
+h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #1a7a6e; margin: 16px 0 6px; }
+p { margin-bottom: 12px; }
+ul.tick { list-style: none; margin: 0 0 14px; }
+ul.tick li { padding: 3px 0 3px 22px; position: relative; }
+ul.tick li:before { content: ""; position: absolute; left: 2px; top: 10px; width: 10px; height: 10px; border-radius: 50%; background: #1a7a6e; }
+ul.plain { margin: 0 0 14px 20px; }
+ul.plain li { margin-bottom: 4px; }
+
+.panel { background: #f1efe7; border: 1px solid #d9d5c8; border-top: 3px solid #1a7a6e; padding: 14px 16px; margin-bottom: 18px; font-size: 13.5px; }
+.panel h3 { margin-top: 0; }
+.panel ul { margin: 0 0 4px 18px; }
+.panel li { margin-bottom: 3px; }
+
+table.data { width: 100%; border-collapse: collapse; margin: 10px 0 20px; font-size: 13.5px; background: #fff; }
+table.data th { background: #0d2b45; color: #e8eef3; text-align: left; padding: 8px 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .8px; }
+table.data td { padding: 7px 10px; border-bottom: 1px solid #ddd9cb; vertical-align: top; }
+table.data tr:nth-child(even) td { background: #f6f4ec; }
+table.data td.year { font-weight: bold; color: #0d2b45; white-space: nowrap; }
+tr.region td { background: #dcebe7 !important; color: #0d2b45; font-weight: bold; font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; }
+
+.newsitem { border-left: 4px solid #1a7a6e; background: #fff; padding: 12px 16px; margin-bottom: 16px; border-bottom: 1px solid #ddd9cb; }
+.newsitem .date { font-size: 12.5px; color: #8a6d2f; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+.newsitem h3 { margin: 2px 0 6px; font-size: 16px; text-transform: none; letter-spacing: 0; color: #0d2b45; }
+
+.announce { background: #fbf7ea; border: 1px solid #c8a24a; border-left: 6px solid #c8a24a; padding: 16px 18px; margin: 0 0 20px; }
+.announce .date { font-size: 12.5px; color: #8a6d2f; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+.announce h3 { color: #0d2b45; font-size: 17px; text-transform: none; letter-spacing: 0; margin: 4px 0 8px; }
+
+.facts { margin: 0 0 20px; }
+.facts th { width: 42%; }
+
+.czechblock { background: #f1efe7; border: 1px solid #d9d5c8; padding: 14px 18px; margin: 20px 0; }
+.czechblock h2 { margin-top: 0; }
+
+footer.site { background: #0d2b45; color: #b9c8d4; font-size: 13px; margin-top: 10px; }
+footer.site .in { max-width: 1100px; margin: 0 auto; padding: 26px 16px 10px; display: flex; gap: 30px; flex-wrap: wrap; }
+footer.site .col { flex: 1 1 240px; }
+footer.site h4 { color: #ffffff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+footer.site a { color: #9fc4d6; }
+footer.site p { margin-bottom: 6px; }
+footer.site .bottom { max-width: 1100px; margin: 0 auto; padding: 12px 16px; border-top: 1px solid #1c4a74; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 12px; color: #8fa5b5; }
+footer.site .specimen { font-style: italic; color: #7d94a5; }
+
+@media (max-width: 820px) { .grid { flex-direction: column; } }
+
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="in">
+    <span class="org">České nezávislé dopravní sdružení · Independent Transport Association of the Czech Republic</span>
+    <span>IČO 27012344 · English edition · Chrudim, Czech Republic</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="in">
+    <svg width="86" height="86" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-label="ČNDS emblem">
+<circle cx="48" cy="48" r="44" fill="none" stroke="#0d2b45" stroke-width="4"/>
+<path d="M 12 70 C 32 70 32 42 54 42 C 70 42 74 26 86 22" fill="none" stroke="#1a7a6e" stroke-width="5" stroke-linecap="round"/>
+<path d="M 14 26 C 36 26 36 54 58 54 C 74 54 78 66 88 74" fill="none" stroke="#c8a24a" stroke-width="5" stroke-linecap="round"/>
+<path d="M 12 52 C 28 52 28 30 50 30 C 68 30 72 44 86 48" fill="none" stroke="#2c5d8a" stroke-width="4" stroke-linecap="round"/>
+<circle cx="12" cy="70" r="4" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="86" cy="22" r="4" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="14" cy="26" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
+<circle cx="88" cy="74" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
+<circle cx="12" cy="52" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
+<circle cx="86" cy="48" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
+<circle cx="48" cy="48" r="3" fill="#0d2b45"/>
+</svg>
+    <div>
+      <h1>ČNDS</h1>
+      <div class="sub">České nezávislé dopravní sdružení</div>
+      <div class="cz">Independent Transport Association of the Czech Republic · founded 2005</div>
+    </div>
+  </div>
+</header>
+<nav class="main" aria-label="Main navigation">
+  <div class="in"><ul><a href="index.html" class="active">Home</a><a href="about.html">About the Association</a><a href="members.html">Member Organisations</a><a href="award.html">The Award</a><a href="laureates.html">Laureates</a><a href="laureates/2024.html">2024 Award</a><a href="news.html">News Archive</a><a href="contact.html">Contact</a></ul></div>
+</nav>
+<div class="routeband"><svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M 0 30 L 1200 30" stroke="#1a7a6e" stroke-width="4"/>
+<path d="M 0 12 C 300 12 300 24 560 24 C 820 24 820 30 1200 30" stroke="#c8a24a" stroke-width="3" fill="none"/>
+<path d="M 0 30 C 260 30 260 6 520 6 C 780 6 780 34 1200 34" stroke="#2c5d8a" stroke-width="3" fill="none"/>
+<circle cx="0" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="300" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="560" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="900" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="1200" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
+<circle cx="520" cy="6" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
+<circle cx="0" cy="12" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
+</svg></div>
+<div class="wrap">
+  <div class="crumbs"><span>Home</span></div>
+  <div class="grid">
+    <div class="maincol">
+<h1 class="page">Independent transport research since 2005</h1>
+<p class="lede">České nezávislé dopravní sdružení (ČNDS) — the Independent Transport Association of the Czech Republic — was founded on 24 November 2005 in Chrudim as an independent professional association of transport researchers, planners and organisations. The Association connects member organisations in 38 countries, maintains public records of awarded transport research, and has presented the biennial ČNDS International Award for Transport Research since 2006.</p>
+
+<div class="announce">
+  <div class="date">14 October 2024 · Award announcement</div>
+  <h3>ČNDS International Award 2024 conferred on Dr. Yanxi Liu</h3>
+  <p>The tenth edition of the ČNDS International Award for Transport Research has been conferred on <strong>Dr. Yanxi Liu</strong> of <strong>TransMetric Analytics, Inc.</strong> (United States) for the original contribution of the <em>Multivariate Transport Ranking Stability test</em> (MTRS). The award ceremony took place in Prague on 6 November 2024.</p>
+  <p><a href="laureates/2024.html">Read the full announcement and the laureate page</a></p>
+</div>
+
+<h2 class="first">Purpose of the Association</h2>
+<ul class="tick">
+  <li>To support independent research in transport planning and transport policy.</li>
+  <li>To connect researchers, planners and professional organisations across countries.</li>
+  <li>To maintain a public record of transport research distinguished by the Association.</li>
+  <li>To promote evaluation methods that strengthen the quality of transport investment decisions.</li>
+</ul>
+
+<h2>The ČNDS International Award</h2>
+<p>The <a href="award.html">ČNDS International Award for Transport Research</a> was established in 2006, one year after the founding of the Association. It is presented every two years to a single laureate on the basis of research reports or published research of original contribution to transport. Nominations are submitted by member organisations or by previous laureates, and the decision is taken by vote of an independent international jury. The <a href="laureates.html">record of laureates</a> covers ten editions, from 2006 to 2024.</p>
+
+<h2>O sdružení</h2>
+<div class="czechblock" lang="cs">
+<p>České nezávislé dopravní sdružení (ČNDS) je nezávislá odborná asociace založená v roce 2005. Sdružujeme dopravní výzkumníky, plánovače a odborné organizace, podporujeme výměnu poznatků v dopravním výzkumu a plánování a od roku 2006 každé dva roky udělujeme mezinárodní ocenění ČNDS International Award for Transport Research. Nové členské organizace a nominace přijímáme po celý rok.</p>
+</div>
+</div>
+    <div class="sidecol">
+<div class="panel">
+  <h3>News</h3>
+  <ul>
+    <li><a href="laureates/2024.html">14 Oct 2024 · Award 2024 announced</a></li>
+    <li><a href="news.html#2022">17 Oct 2022 · Award 2022 conferred</a></li>
+    <li><a href="news.html#2020">12 Oct 2020 · Award 2020 conferred</a></li>
+  </ul>
+  <p style="margin-top:8px"><a href="news.html">All announcements</a></p>
+</div>
+<div class="panel">
+  <h3>The Association in brief</h3>
+  <ul>
+    <li>Founded: 24 November 2005</li>
+    <li>Registered seat: Chrudim, Czech Republic</li>
+    <li>IČO: 27012344</li>
+    <li>Member organisations in 38 countries</li>
+    <li>Biennial award since 2006</li>
+    <li>Ten award editions, 2006–2024</li>
+  </ul>
+</div>
+<div class="panel">
+  <h3>Quick links</h3>
+  <ul>
+    <li><a href="about.html">About the Association</a></li>
+    <li><a href="members.html">Member Organisations</a></li>
+    <li><a href="award.html">Award regulations</a></li>
+    <li><a href="contact.html">Contact the Secretariat</a></li>
+  </ul>
+</div>
+</div>
+  </div>
+</div>
+<footer class="site">
+  <div class="in">
+    <div class="col">
+      <h4>ČNDS</h4>
+      <p>České nezávislé dopravní sdružení (ČNDS) is an independent professional association of transport researchers, planners and organisations, founded in 2005.</p>
+      <p>IČO 27012344 · Registered seat: Heydukova 392, 537 01 Chrudim, Czech Republic</p>
+    </div>
+    <div class="col">
+      <h4>Association</h4>
+      <p><a href="about.html">About the Association</a><br>
+      <a href="members.html">Member Organisations</a><br>
+      <a href="award.html">The Award</a><br>
+      <a href="laureates.html">Laureates</a></p>
+    </div>
+    <div class="col">
+      <h4>Contact</h4>
+      <p>ČNDS Secretariat<br>Heydukova 392<br>537 01 Chrudim, Czech Republic</p>
+      <p><a href="mailto:secretariat@cnds-association.org">secretariat@cnds-association.org</a></p>
+    </div>
+  </div>
+  <div class="bottom">
+    <span>© 2005–2024 České nezávislé dopravní sdružení (ČNDS). All rights reserved.</span>
+    <span class="specimen">Training specimen</span>
+  </div>
+</footer>
+</body>
+</html>
