@@ -1,240 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="googlebot" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="České nezávislé dopravní sdružení (ČNDS) — Independent Transport Association of the Czech Republic.">
 <title>ČNDS — Independent Transport Association of the Czech Republic</title>
-<meta name="description" content="ČNDS, the Independent Transport Association of the Czech Republic, founded 2005; biennial ČNDS International Award for Advances in Transport Modelling since 2006.">
 <style>
-/* ČNDS — issuer style profile (2026-11-16)
-   Central-European provincial academic association: sober, bookish.
-   Pure white, deep blue #0d2b45 + teal #1a7a6e, Baskerville headings,
-   Georgia body, narrow single column (860px), thin double rules,
-   drop caps, underlined navigation. Czech name emphasised in top bar. */
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { background: #ffffff; }
-body { font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.65; color: #26292d; background: #ffffff; }
-a { color: #0d5f58; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.topbar { background: #0d2b45; color: #c9d6e0; font-size: 12.5px; }
-.topbar .in { max-width: 860px; margin: 0 auto; padding: 7px 16px; display: flex; justify-content: space-between; flex-wrap: wrap; }
-.topbar .in span + span { margin-left: 20px; }
-.topbar .org { color: #ffffff; font-size: 14.5px; font-weight: bold; letter-spacing: .4px; }
-
-.masthead { background: #ffffff; border-bottom: 3px double #0d2b45; }
-.masthead .in { max-width: 860px; margin: 0 auto; padding: 24px 16px 16px; display: flex; align-items: center; gap: 20px; }
-.masthead h1 { font-family: Baskerville, 'Libre Baskerville', Georgia, 'Times New Roman', serif; font-weight: normal; font-size: 34px; color: #0d2b45; letter-spacing: 1px; margin: 0; }
-.masthead .sub { font-size: 15.5px; color: #0d2b45; margin-top: 3px; font-style: italic; }
-.masthead .cz { color: #1a7a6e; font-size: 13px; font-style: italic; }
-
-nav.main { background: #ffffff; border-bottom: 1px solid #0d2b45; }
-nav.main .in { max-width: 860px; margin: 0 auto; padding: 0 16px; }
-nav.main ul { list-style: none; display: flex; flex-wrap: wrap; }
-nav.main a { display: block; color: #0d2b45; font-size: 12.5px; padding: 11px 12px 9px; letter-spacing: .4px; white-space: nowrap; border-bottom: 2px solid transparent; }
-nav.main a:hover { color: #1a7a6e; border-bottom-color: #1a7a6e; text-decoration: none; }
-nav.main a.active { color: #0d2b45; border-bottom: 2px solid #1a7a6e; font-weight: bold; }
-
-.routeband { background: #ffffff; border-bottom: 1px solid #d9d5c8; }
-.routeband svg { display: block; width: 100%; height: 40px; }
-
-.wrap { max-width: 860px; margin: 0 auto; padding: 26px 16px 42px; }
-.crumbs { font-size: 12.5px; color: #6b7178; margin-bottom: 16px; font-style: italic; }
-.crumbs a { color: #0d5f58; }
-
-.grid { display: block; }
-.maincol { min-width: 0; }
-.sidecol { margin-top: 28px; border-top: 1px solid #0d2b45; padding-top: 16px; }
-
-h1.page { font-family: Baskerville, 'Libre Baskerville', Georgia, 'Times New Roman', serif; font-weight: normal; font-size: 31px; color: #0d2b45; margin-bottom: 12px; letter-spacing: .3px; border-bottom: 3px double #0d2b45; padding-bottom: 7px; }
-p.lede { color: #4a5560; font-size: 16px; margin-bottom: 20px; }
-p.lede::first-letter { font-family: Baskerville, 'Libre Baskerville', Georgia, serif; float: left; font-size: 3.3em; line-height: .9; padding: 3px 9px 0 0; color: #0d2b45; }
-h2 { font-family: Baskerville, 'Libre Baskerville', Georgia, 'Times New Roman', serif; font-weight: normal; font-size: 21.5px; color: #0d2b45; border-bottom: 3px double #0d2b45; padding-bottom: 4px; margin: 30px 0 12px; letter-spacing: .3px; }
-h2.first { margin-top: 0; }
-h3 { font-size: 12.5px; text-transform: uppercase; letter-spacing: 1.2px; color: #1a7a6e; margin: 16px 0 6px; }
-p { margin-bottom: 13px; }
-ul.tick { list-style: none; margin: 0 0 14px; }
-ul.tick li { padding: 4px 0 4px 24px; position: relative; }
-ul.tick li:before { content: ""; position: absolute; left: 2px; top: 12px; width: 9px; height: 9px; border: 1px solid #1a7a6e; background: transparent; }
-ul.plain { margin: 0 0 14px 22px; }
-ul.plain li { margin-bottom: 5px; }
-
-.panel { background: #ffffff; border: 1px solid #cfcbc0; border-top: 3px double #0d2b45; padding: 14px 18px; margin-bottom: 14px; font-size: 13.5px; }
-.panel h3 { margin-top: 0; }
-.panel ul { margin: 0 0 4px 18px; }
-.panel li { margin-bottom: 4px; }
-
-table.data { width: 100%; border-collapse: collapse; margin: 12px 0 22px; font-size: 13.5px; background: #fff; border-top: 1px solid #0d2b45; }
-table.data th { background: #f4f2ea; color: #0d2b45; text-align: left; padding: 8px 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .8px; border-bottom: 1px solid #0d2b45; }
-table.data td { padding: 8px 10px; border-bottom: 1px solid #ddd9cb; vertical-align: top; }
-table.data tr:nth-child(even) td { background: #faf9f4; }
-table.data td.year { font-weight: bold; color: #0d2b45; white-space: nowrap; }
-tr.region td { background: #eef4f2 !important; color: #0d2b45; font-weight: bold; font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; }
-
-.newsitem { border-left: 3px double #1a7a6e; background: #fff; padding: 12px 16px; margin-bottom: 16px; border-bottom: 1px solid #ddd9cb; }
-.newsitem .date { font-size: 12.5px; color: #8a6d2f; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
-.newsitem h3 { margin: 2px 0 6px; font-size: 16.5px; text-transform: none; letter-spacing: 0; color: #0d2b45; font-family: Baskerville, 'Libre Baskerville', Georgia, serif; }
-
-.announce { background: #fbf7ea; border: 1px solid #c8a24a; border-left: 5px solid #c8a24a; padding: 16px 18px; margin: 0 0 20px; }
-.announce .date { font-size: 12.5px; color: #8a6d2f; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
-.announce h3 { color: #0d2b45; font-size: 17px; text-transform: none; letter-spacing: 0; margin: 4px 0 8px; font-family: Baskerville, 'Libre Baskerville', Georgia, serif; }
-
-.facts { margin: 0 0 20px; }
-.facts th { width: 42%; }
-
-.czechblock { background: #f8f7f2; border: 1px solid #d9d5c8; padding: 16px 20px; margin: 20px 0; }
-.czechblock h2 { margin-top: 0; }
-
-footer.site { background: #0d2b45; color: #b9c8d4; font-size: 13px; margin-top: 14px; }
-footer.site .in { max-width: 860px; margin: 0 auto; padding: 26px 16px 10px; display: flex; gap: 30px; flex-wrap: wrap; }
-footer.site .col { flex: 1 1 240px; }
-footer.site h4 { color: #ffffff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-footer.site a { color: #9fc4d6; }
-footer.site p { margin-bottom: 6px; }
-footer.site .bottom { max-width: 860px; margin: 0 auto; padding: 12px 16px; border-top: 1px solid #1c4a74; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 12px; color: #8fa5b5; }
-footer.site .bottom::after { content: "Sídlo sdružení: Heydukova 392, 537 01 Chrudim, Česká republika"; display: block; width: 100%; margin-top: 6px; font-style: italic; color: #9fb2c0; }
-footer.site .specimen { font-style: italic; color: #7d94a5; }
-
-@media (max-width: 820px) {
-  .masthead .in { flex-direction: column; text-align: center; }
-  footer.site .in { flex-direction: column; }
+:root {
+    --navy: #0d2b45;
+    --teal: #1a7a6e;
+    --gold: #b39a64;
+    --cream: #f8f6ef;
+    --paper: #fffefa;
+    --ink: #333b3d;
+    --muted: #777970;
+    --line: #ded9ca;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+}
+
+.page {
+    width: 100%;
+    max-width: 860px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 48px;
+    background: var(--paper);
+    border-left: 1px solid #eae6dc;
+    border-right: 1px solid #eae6dc;
+}
+
+/* Institutional masthead */
+
+.topline {
+    padding: 12px 0 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.055em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.masthead {
+    padding: 32px 0 27px;
+    text-align: center;
+    border-bottom: 3px double var(--gold);
+}
+
+.monogram {
+    margin-bottom: 5px;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 43px;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+}
+
+.czech-name {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    line-height: 1.5;
+}
+
+.english-name {
+    margin-top: 4px;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.035em;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 3px 10px;
+    color: var(--navy);
+    border-bottom: none;
+    white-space: nowrap;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--teal);
+}
+
+.navigation a.active {
+    font-weight: bold;
+}
+
+.navigation a + a::before {
+    content: "·";
+    position: relative;
+    left: -10px;
+    color: var(--gold);
+}
+
+/* Main content */
+
+main {
+    padding: 23px 0 45px;
+}
+
+.breadcrumb {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: 31px;
+    line-height: 1.3;
+}
+
+h2 {
+    margin: 0 0 14px;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+.introduction {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.introduction::first-letter {
+    float: left;
+    margin: 5px 9px 0 0;
+    color: var(--teal);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 59px;
+    line-height: 0.78;
+}
+
+.section {
+    margin-top: 31px;
+    padding-top: 22px;
+    border-top: 1px solid var(--gold);
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+.section-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.announcement {
+    margin: 26px 0 31px;
+    padding: 16px 21px 17px;
+    background: #f7f5ed;
+    border-left: 3px solid var(--teal);
+    border-top: 1px solid #e8e2d3;
+    border-bottom: 1px solid #e8e2d3;
+}
+
+.announcement-date {
+    margin-bottom: 7px;
+    color: var(--teal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.announcement h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.announcement p {
+    margin-bottom: 11px;
+    line-height: 1.8;
+}
+
+.announcement-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.purpose-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.purpose-list li {
+    position: relative;
+    margin: 0;
+    padding: 8px 0 8px 22px;
+    border-bottom: 1px dotted var(--line);
+    line-height: 1.65;
+}
+
+.purpose-list li:last-child {
+    border-bottom: none;
+}
+
+.purpose-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+.award-copy {
+    text-align: justify;
+}
+
+.czech-section {
+    padding: 20px 22px;
+    margin-top: 28px;
+    background: #f8f7f1;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.czech-section h2 {
+    font-size: 21px;
+}
+
+.czech-section p {
+    margin: 0;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* Lower information columns */
+
+.lower-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gold);
+}
+
+.lower-column h2 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.news-list,
+.brief-list,
+.quick-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.news-list li {
+    padding: 9px 0;
+    border-bottom: 1px dotted var(--line);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.brief-list li {
+    position: relative;
+    padding: 7px 0 7px 16px;
+    border-bottom: 1px dotted var(--line);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.brief-list li:last-child {
+    border-bottom: none;
+}
+
+.brief-list li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.quick-section {
+    grid-column: 1 / -1;
+    padding-top: 17px;
+    border-top: 1px solid var(--line);
+}
+
+.quick-section h2 {
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+
+.quick-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 23px;
+}
+
+.quick-list li {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.quick-list li::before {
+    content: "› ";
+    color: var(--gold);
+}
+
+/* Footer */
+
+footer {
+    padding: 26px 0 15px;
+    border-top: 3px double var(--gold);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr;
+    gap: 25px;
+    padding-bottom: 23px;
+}
+
+.footer-brand {
+    color: var(--navy);
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+}
+
+.footer-description {
+    margin: 8px 0 10px;
+    color: #62635e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-address {
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin: 3px 0 10px;
+    padding-bottom: 6px;
+    color: var(--navy);
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer-links a {
+    color: #62635e;
+}
+
+.footer-contact {
+    color: #62635e;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-contact a {
+    overflow-wrap: anywhere;
+}
+
+.copyright {
+    padding: 12px 0 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+    text-align: center;
+}
+
+/* Responsive layout */
+
+@media (max-width: 640px) {
+    .page {
+        padding: 0 22px;
+        border: none;
+    }
+
+    .topline {
+        font-size: 9px;
+    }
+
+    .masthead {
+        padding: 25px 0 22px;
+    }
+
+    .monogram {
+        font-size: 37px;
+    }
+
+    .czech-name {
+        font-size: 17px;
+    }
+
+    .english-name {
+        font-size: 11px;
+    }
+
+    .navigation {
+        gap: 2px 0;
+        padding: 9px 0;
+    }
+
+    .navigation a {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .navigation a + a::before {
+        left: -7px;
+    }
+
+    main {
+        padding-top: 19px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .announcement {
+        padding: 14px 15px;
+    }
+
+    .lower-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .quick-section {
+        grid-column: auto;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 23px;
+    }
+
+    .footer-brand-column {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 390px) {
+    .page {
+        padding: 0 17px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand-column {
+        grid-column: auto;
+    }
+
+    .quick-list {
+        display: block;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .page {
+        max-width: none;
+        border: none;
+    }
+
+    a {
+        color: var(--navy);
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="topbar">
-  <div class="in">
-    <span class="org">České nezávislé dopravní sdružení · Independent Transport Association of the Czech Republic</span>
-    <span>IČO 27012344 · English edition · Chrudim, Czech Republic</span>
-  </div>
-</div>
-<header class="masthead">
-  <div class="in">
-    <svg width="86" height="86" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-label="ČNDS emblem">
-<circle cx="48" cy="48" r="44" fill="none" stroke="#0d2b45" stroke-width="4"/>
-<path d="M 12 70 C 32 70 32 42 54 42 C 70 42 74 26 86 22" fill="none" stroke="#1a7a6e" stroke-width="5" stroke-linecap="round"/>
-<path d="M 14 26 C 36 26 36 54 58 54 C 74 54 78 66 88 74" fill="none" stroke="#c8a24a" stroke-width="5" stroke-linecap="round"/>
-<path d="M 12 52 C 28 52 28 30 50 30 C 68 30 72 44 86 48" fill="none" stroke="#2c5d8a" stroke-width="4" stroke-linecap="round"/>
-<circle cx="12" cy="70" r="4" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="86" cy="22" r="4" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="14" cy="26" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
-<circle cx="88" cy="74" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
-<circle cx="12" cy="52" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
-<circle cx="86" cy="48" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
-<circle cx="48" cy="48" r="3" fill="#0d2b45"/>
-</svg>
-    <div>
-      <h1>ČNDS</h1>
-      <div class="sub">České nezávislé dopravní sdružení</div>
-      <div class="cz">Independent Transport Association of the Czech Republic · founded 2005</div>
-    </div>
-  </div>
-</header>
-<nav class="main" aria-label="Main navigation">
-  <div class="in"><ul><a href="index.html" class="active">Home</a><a href="about.html">About the Association</a><a href="members.html">Member Organisations</a><a href="award.html">The Award</a><a href="laureates.html">Laureates</a><a href="laureates/2026.html">2026 Award</a><a href="news.html">News Archive</a><a href="contact.html">Contact</a></ul></div>
-</nav>
-<div class="routeband"><svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M 26 30 L 1174 30" stroke="#1a7a6e" stroke-width="4"/>
-<path d="M 26 12 C 300 12 300 24 560 24 C 820 24 820 30 1174 30" stroke="#c8a24a" stroke-width="3" fill="none"/>
-<path d="M 26 30 C 260 30 260 6 520 6 C 780 6 780 34 1174 34" stroke="#2c5d8a" stroke-width="3" fill="none"/>
-<circle cx="26" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="300" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="560" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="900" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="1174" cy="30" r="5" fill="#f7f5ef" stroke="#1a7a6e" stroke-width="2.5"/>
-<circle cx="520" cy="6" r="4" fill="#f7f5ef" stroke="#2c5d8a" stroke-width="2.5"/>
-<circle cx="26" cy="12" r="4" fill="#f7f5ef" stroke="#c8a24a" stroke-width="2.5"/>
-</svg></div>
-<div class="wrap">
-  <div class="crumbs"><span>Home</span></div>
-  <div class="grid">
-    <div class="maincol">
-<h1 class="page">Independent transport research since 2005</h1>
-<p class="lede">České nezávislé dopravní sdružení (ČNDS) — the Independent Transport Association of the Czech Republic — was founded on 24 November 2005 in Chrudim as an independent professional association of transport researchers, planners and organisations. The Association connects member organisations in 38 countries, maintains public records of awarded transport research, and has presented the biennial ČNDS International Award for Advances in Transport Modelling since 2006.</p>
+<div class="page">
 
-<div class="announce">
-  <div class="date">25 September 2026 · Award announcement</div>
-  <h3>ČNDS International Award 2026 conferred on Ms. Yanxi Liu</h3>
-  <p>The eleventh edition of the ČNDS International Award for Advances in Transport Modelling has been conferred on <strong>Ms. Yanxi Liu</strong> of the <strong>National Transport Research Programme (NTRP)</strong> for the original contribution of the <em>Multivariate Transport Ranking Stability test</em> (MTRS). The award ceremony took place in Prague on 16 October 2026.</p>
-  <p><a href="laureates/2026.html">Read the full announcement and the laureate page</a></p>
-</div>
-
-<h2 class="first">Purpose of the Association</h2>
-<ul class="tick">
-  <li>To support independent research in transport planning and transport policy.</li>
-  <li>To connect researchers, planners and professional organisations across countries.</li>
-  <li>To maintain a public record of transport research distinguished by the Association.</li>
-  <li>To promote evaluation methods that strengthen the quality of transport investment decisions.</li>
-</ul>
-
-<h2>The ČNDS International Award</h2>
-<p>The <a href="award.html">ČNDS International Award for Advances in Transport Modelling</a> was established in 2006, one year after the founding of the Association. It is presented every two years to a single laureate on the basis of research reports or published research of original contribution to transport. Nominations are submitted by member organisations or by previous laureates, and the decision is taken by vote of an independent international jury. The <a href="laureates.html">record of laureates</a> covers eleven editions, from 2006 to 2026.</p>
-
-<h2>O sdružení</h2>
-<div class="czechblock" lang="cs">
-<p>České nezávislé dopravní sdružení (ČNDS) je nezávislá odborná asociace založená v roce 2005. Sdružujeme dopravní výzkumníky, plánovače a odborné organizace, podporujeme výměnu poznatků v dopravním výzkumu a plánování a od roku 2006 každé dva roky udělujeme mezinárodní ocenění ČNDS International Award for Advances in Transport Modelling. Nové členské organizace a nominace přijímáme po celý rok.</p>
-</div>
-</div>
-    <div class="sidecol">
-<div class="panel">
-  <h3>News</h3>
-  <ul>
-    <li><a href="laureates/2026.html">25 Sep 2026 · Award 2026 announced</a></li>
-    <li><a href="news.html#2022">17 Oct 2022 · Award 2022 conferred</a></li>
-    <li><a href="news.html#2020">12 Oct 2020 · Award 2020 conferred</a></li>
-  </ul>
-  <p style="margin-top:8px"><a href="news.html">All announcements</a></p>
-</div>
-<div class="panel">
-  <h3>The Association in brief</h3>
-  <ul>
-    <li>Founded: 24 November 2005</li>
-    <li>Registered seat: Chrudim, Czech Republic</li>
-    <li>IČO: 27012344</li>
-    <li>Member organisations in 38 countries</li>
-    <li>Biennial award since 2006</li>
-    <li>Eleven award editions, 2006–2026</li>
-  </ul>
-</div>
-<div class="panel">
-  <h3>Quick links</h3>
-  <ul>
-    <li><a href="about.html">About the Association</a></li>
-    <li><a href="members.html">Member Organisations</a></li>
-    <li><a href="award.html">Award regulations</a></li>
-    <li><a href="contact.html">Contact the Secretariat</a></li>
-  </ul>
-</div>
-</div>
-  </div>
-</div>
-<footer class="site">
-  <div class="in">
-    <div class="col">
-      <h4>ČNDS</h4>
-      <p>České nezávislé dopravní sdružení (ČNDS) is an independent professional association of transport researchers, planners and organisations, founded in 2005.</p>
-      <p>IČO 27012344 · Registered seat: Heydukova 392, 537 01 Chrudim, Czech Republic</p>
+    <div class="topline">
+        České nezávislé dopravní sdružení · Independent Transport Association of the Czech Republic
+        <br>
+        IČO 27012344 · English edition · Chrudim, Czech Republic
     </div>
-    <div class="col">
-      <h4>Association</h4>
-      <p><a href="about.html">About the Association</a><br>
-      <a href="members.html">Member Organisations</a><br>
-      <a href="award.html">The Award</a><br>
-      <a href="laureates.html">Laureates</a></p>
-    </div>
-    <div class="col">
-      <h4>Contact</h4>
-      <p>ČNDS Secretariat<br>Heydukova 392<br>537 01 Chrudim, Czech Republic</p>
-      <p><a href="mailto:secretariat@cnds-association.org">secretariat@cnds-association.org</a></p>
-    </div>
-  </div>
-  <div class="bottom">
-    <span>© 2005–2026 České nezávislé dopravní sdružení (ČNDS). All rights reserved.</span>
-  </div>
-</footer>
+
+    <header class="masthead">
+        <div class="monogram">ČNDS</div>
+        <div class="czech-name">České nezávislé dopravní sdružení</div>
+        <div class="english-name">Independent Transport Association of the Czech Republic · founded 2005</div>
+    </header>
+
+    <nav class="navigation" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About the Association</a>
+        <a href="#member-organisations">Member Organisations</a>
+        <a href="#award">The Award</a>
+        <a href="#laureates">Laureates</a>
+        <a href="#award-2026">2026 Award</a>
+        <a href="#news">News Archive</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="home">
+
+        <div class="breadcrumb">Home</div>
+
+        <section aria-labelledby="intro-heading">
+            <h1 id="intro-heading">Independent transport research since 2005</h1>
+
+            <p class="introduction">České nezávislé dopravní sdružení (ČNDS) — the Independent Transport Association of the Czech Republic — was founded on 24 November 2005 in Chrudim as an independent professional association of transport researchers, planners and organisations. The Association connects member organisations in 38 countries, maintains public records of awarded transport research, and has presented the biennial ČNDS International Award for Advances in Transport Modelling since 2006.</p>
+        </section>
+
+        <section class="announcement" id="award-2026" aria-labelledby="announcement-heading">
+            <div class="announcement-date">25 September 2026 · Award announcement</div>
+
+            <h2 id="announcement-heading">ČNDS International Award 2026 conferred on Ms. Yanxi Liu</h2>
+
+            <p>The eleventh edition of the ČNDS International Award for Advances in Transport Modelling has been conferred on
+            <a href="#laureates">Ms. Yanxi Liu</a>
+            of the
+            <a href="#member-organisations">National Transport Research Programme (NTRP)</a>
+            for the original contribution of the
+            <a href="#award">Multivariate Transport Ranking Stability test</a>
+            (MTRS). The award ceremony took place in Prague on 16 October 2026.</p>
+
+            <a class="announcement-link" href="#laureates">Read the full announcement and the laureate page</a>
+        </section>
+
+        <section class="section" id="about">
+            <div class="section-heading">
+                <h2>Purpose of the Association</h2>
+            </div>
+
+            <ul class="purpose-list">
+                <li>To support independent research in transport planning and transport policy.</li>
+                <li>To connect researchers, planners and professional organisations across countries.</li>
+                <li>To maintain a public record of transport research distinguished by the Association.</li>
+                <li>To promote evaluation methods that strengthen the quality of transport investment decisions.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="award">
+            <div class="section-heading">
+                <h2>The ČNDS International Award</h2>
+            </div>
+
+            <p class="award-copy">The <a href="#laureates">ČNDS International Award for Advances in Transport Modelling</a> was established in 2006, one year after the founding of the Association. It is presented every two years to a single laureate on the basis of research reports or published research of original contribution to transport. Nominations are submitted by member organisations or by previous laureates, and the decision is taken by vote of an independent international jury. The <a href="#laureates">record of laureates</a> covers eleven editions, from 2006 to 2026.</p>
+        </section>
+
+        <section class="czech-section">
+            <h2>O sdružení</h2>
+            <p>České nezávislé dopravní sdružení (ČNDS) je nezávislá odborná asociace založená v roce 2005. Sdružujeme dopravní výzkumníky, plánovače a odborné organizace, podporujeme výměnu poznatků v dopravním výzkumu a plánování a od roku 2006 každé dva roky udělujeme mezinárodní ocenění ČNDS International Award for Advances in Transport Modelling. Nové členské organizace a nominace přijímáme po celý rok.</p>
+        </section>
+
+        <div class="lower-content">
+
+            <section class="lower-column" id="news">
+                <h2>News</h2>
+
+                <ul class="news-list">
+                    <li>
+                        <span class="news-date">25 Sep 2026 ·</span>
+                        <a href="#award-2026">Award 2026 announced</a>
+                    </li>
+                    <li>
+                        <span class="news-date">17 Oct 2022 ·</span>
+                        <a href="#laureates">Award 2022 conferred</a>
+                    </li>
+                    <li>
+                        <span class="news-date">12 Oct 2020 ·</span>
+                        <a href="#laureates">Award 2020 conferred</a>
+                    </li>
+                </ul>
+
+                <a class="text-link" href="#news">All announcements</a>
+            </section>
+
+            <section class="lower-column">
+                <h2>The Association in brief</h2>
+
+                <ul class="brief-list">
+                    <li>Founded: 24 November 2005</li>
+                    <li>Registered seat: Chrudim, Czech Republic</li>
+                    <li>IČO: 27012344</li>
+                    <li>Member organisations in 38 countries</li>
+                    <li>Biennial award since 2006</li>
+                    <li>Eleven award editions, 2006–2026</li>
+                </ul>
+            </section>
+
+            <section class="quick-section" id="member-organisations">
+                <h2>Quick links</h2>
+
+                <ul class="quick-list">
+                    <li><a href="#about">About the Association</a></li>
+                    <li><a href="#member-organisations">Member Organisations</a></li>
+                    <li><a href="#award">Award regulations</a></li>
+                    <li><a href="#contact">Contact the Secretariat</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-main">
+
+            <div class="footer-brand-column">
+                <div class="footer-brand">ČNDS</div>
+
+                <p class="footer-description">České nezávislé dopravní sdružení (ČNDS) is an independent professional association of transport researchers, planners and organisations, founded in 2005.</p>
+
+                <div class="footer-address">IČO 27012344 · Registered seat: Heydukova 392, 537 01 Chrudim, Czech Republic</div>
+            </div>
+
+            <div>
+                <h3 class="footer-heading">Association</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About the Association</a></li>
+                    <li><a href="#member-organisations">Member Organisations</a></li>
+                    <li><a href="#award">The Award</a></li>
+                    <li><a href="#laureates">Laureates</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h3 class="footer-heading">Contact</h3>
+                <div class="footer-contact">
+                    ČNDS Secretariat
+                    <br>
+                    Heydukova 392
+                    <br>
+                    537 01 Chrudim, Czech Republic
+                    <br>
+                    <a href="mailto:secretariat@cnds-association.org">secretariat@cnds-association.org</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">© 2005–2026 České nezávislé dopravní sdružení (ČNDS). All rights reserved.</div>
+    </footer>
+
+</div>
 </body>
 </html>
