@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="19th ČNDS Annual Transport Seminar, 3 April 2025, Chrudim — programme and the central presentation on the Multivariate Transport Ranking Stability (MTRS) test.">
+<title>19th Annual Transport Seminar — ČNDS</title>
+<style>
+:root {
+    --navy: #0d2b45;
+    --teal: #1a7a6e;
+    --gold: #b39a64;
+    --cream: #f8f6ef;
+    --paper: #fffefa;
+    --ink: #333b3d;
+    --muted: #777970;
+    --line: #ded9ca;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+}
+
+.page {
+    width: 100%;
+    max-width: 860px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 48px;
+    background: var(--paper);
+    border-left: 1px solid #eae6dc;
+    border-right: 1px solid #eae6dc;
+}
+
+/* Institutional masthead */
+
+.topline {
+    padding: 12px 0 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.055em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.masthead {
+    padding: 32px 0 27px;
+    text-align: center;
+    border-bottom: 3px double var(--gold);
+}
+
+.monogram {
+    margin-bottom: 5px;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 43px;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+}
+
+.czech-name {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    line-height: 1.5;
+}
+
+.english-name {
+    margin-top: 4px;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.035em;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 3px 10px;
+    color: var(--navy);
+    border-bottom: none;
+    white-space: nowrap;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--teal);
+}
+
+.navigation a.active {
+    font-weight: bold;
+}
+
+.navigation a + a::before {
+    content: "·";
+    position: relative;
+    left: -10px;
+    color: var(--gold);
+}
+
+/* Main content */
+
+main {
+    padding: 23px 0 45px;
+}
+
+.breadcrumb {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: 31px;
+    line-height: 1.3;
+}
+
+h2 {
+    margin: 0 0 14px;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+.introduction {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.introduction::first-letter {
+    float: left;
+    margin: 5px 9px 0 0;
+    color: var(--teal);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 59px;
+    line-height: 0.78;
+}
+
+.section {
+    margin-top: 31px;
+    padding-top: 22px;
+    border-top: 1px solid var(--gold);
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+.section-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.announcement {
+    margin: 26px 0 31px;
+    padding: 16px 21px 17px;
+    background: #f7f5ed;
+    border-left: 3px solid var(--teal);
+    border-top: 1px solid #e8e2d3;
+    border-bottom: 1px solid #e8e2d3;
+}
+
+.announcement-date {
+    margin-bottom: 7px;
+    color: var(--teal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.announcement h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.announcement p {
+    margin-bottom: 11px;
+    line-height: 1.8;
+}
+
+.announcement-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.purpose-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.purpose-list li {
+    position: relative;
+    margin: 0;
+    padding: 8px 0 8px 22px;
+    border-bottom: 1px dotted var(--line);
+    line-height: 1.65;
+}
+
+.purpose-list li:last-child {
+    border-bottom: none;
+}
+
+.purpose-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+.award-copy {
+    text-align: justify;
+}
+
+.czech-section {
+    padding: 20px 22px;
+    margin-top: 28px;
+    background: #f8f7f1;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.czech-section h2 {
+    font-size: 21px;
+}
+
+.czech-section p {
+    margin: 0;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* Lower information columns */
+
+.lower-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gold);
+}
+
+.lower-column h2 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.news-list,
+.brief-list,
+.quick-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.news-list li {
+    padding: 9px 0;
+    border-bottom: 1px dotted var(--line);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.brief-list li {
+    position: relative;
+    padding: 7px 0 7px 16px;
+    border-bottom: 1px dotted var(--line);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.brief-list li:last-child {
+    border-bottom: none;
+}
+
+.brief-list li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.quick-section {
+    grid-column: 1 / -1;
+    padding-top: 17px;
+    border-top: 1px solid var(--line);
+}
+
+.quick-section h2 {
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+
+.quick-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 23px;
+}
+
+.quick-list li {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.quick-list li::before {
+    content: "› ";
+    color: var(--gold);
+}
+
+/* News archive */
+
+.archive-intro {
+    margin-bottom: 26px;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.archive-section {
+    margin-top: 25px;
+    padding-top: 23px;
+    border-top: 1px solid var(--gold);
+}
+
+.archive-section .section-heading {
+    margin-bottom: 5px;
+}
+
+.archive-entry {
+    position: relative;
+    padding: 20px 0 21px;
+    border-bottom: 1px dotted var(--line);
+}
+
+.archive-entry:last-child {
+    border-bottom: none;
+}
+
+.archive-entry:first-child {
+    padding-top: 16px;
+}
+
+.archive-entry .announcement-date {
+    margin-bottom: 6px;
+}
+
+.archive-entry h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+.archive-entry p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.archive-entry p:last-of-type {
+    margin-bottom: 5px;
+}
+
+.archive-entry .announcement-link {
+    margin-top: 2px;
+}
+
+.archive-entry.featured-entry {
+    margin: 10px -20px 8px;
+    padding: 18px 20px 20px;
+    background: #f8f7f1;
+    border-left: 3px solid var(--teal);
+    border-top: 1px solid #e8e2d3;
+    border-bottom: 1px solid #e8e2d3;
+}
+
+.archive-entry.featured-entry + .archive-entry {
+    padding-top: 20px;
+}
+
+.archive-bottom {
+    margin-top: 30px;
+    padding-top: 23px;
+    border-top: 1px solid var(--gold);
+}
+
+.archive-bottom .lower-content {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.archive-bottom .lower-column h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+.archive-latest-date {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--teal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+}
+
+.archive-latest-title {
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.archive-records {
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.archive-records a {
+    font-style: italic;
+}
+
+/* Footer */
+
+footer {
+    padding: 26px 0 15px;
+    border-top: 3px double var(--gold);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr;
+    gap: 25px;
+    padding-bottom: 23px;
+}
+
+.footer-brand {
+    color: var(--navy);
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+}
+
+.footer-description {
+    margin: 8px 0 10px;
+    color: #62635e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-address {
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin: 3px 0 10px;
+    padding-bottom: 6px;
+    color: var(--navy);
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer-links a {
+    color: #62635e;
+}
+
+.footer-contact {
+    color: #62635e;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-contact a {
+    overflow-wrap: anywhere;
+}
+
+.copyright {
+    padding: 12px 0 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+    text-align: center;
+}
+
+/* Responsive layout */
+
+@media (max-width: 640px) {
+    .page {
+        padding: 0 22px;
+        border: none;
+    }
+
+    .topline {
+        font-size: 9px;
+    }
+
+    .masthead {
+        padding: 25px 0 22px;
+    }
+
+    .monogram {
+        font-size: 37px;
+    }
+
+    .czech-name {
+        font-size: 17px;
+    }
+
+    .english-name {
+        font-size: 11px;
+    }
+
+    .navigation {
+        gap: 2px 0;
+        padding: 9px 0;
+    }
+
+    .navigation a {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .navigation a + a::before {
+        left: -7px;
+    }
+
+    main {
+        padding-top: 19px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .announcement {
+        padding: 14px 15px;
+    }
+
+    .lower-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .quick-section {
+        grid-column: auto;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 23px;
+    }
+
+    .footer-brand-column {
+        grid-column: 1 / -1;
+    }
+
+    .archive-entry.featured-entry {
+        margin-left: -12px;
+        margin-right: -12px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .page {
+        padding: 0 17px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand-column {
+        grid-column: auto;
+    }
+
+    .quick-list {
+        display: block;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .page {
+        max-width: none;
+        border: none;
+    }
+
+    a {
+        color: var(--navy);
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+    <div class="topline">
+        České nezávislé dopravní sdružení · Independent Transport Association of the Czech Republic
+        <br>
+        IČO 27012344 · English edition · Chrudim, Czech Republic
+    </div>
+
+    <header class="masthead">
+        <div class="monogram">ČNDS</div>
+        <div class="czech-name">České nezávislé dopravní sdružení</div>
+        <div class="english-name">Independent Transport Association of the Czech Republic · founded 2005</div>
+    </header>
+
+        <nav class="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About the Association</a>
+        <a href="#member-organisations">Member Organisations</a>
+        <a href="#award">The Award</a>
+        <a href="#laureates">Laureates</a>
+        <a href="#award-2026">2026 Award</a>
+        <a href="#news">News Archive</a>
+        <a class="active" href="#seminar">Seminar 2025</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+        <main id="seminar">
+
+        <div class="breadcrumb">Home &nbsp;›&nbsp; Events &nbsp;›&nbsp; 19th Annual Transport Seminar</div>
+
+        <section aria-labelledby="seminar-heading">
+            <h1 id="seminar-heading">19th ČNDS Annual Transport Seminar</h1>
+
+            <p class="introduction">The nineteenth annual transport seminar of the Independent Transport Association of the Czech Republic was held on 3 April 2025 at the Association&rsquo;s premises in Chrudim. Member organisations, transport researchers and planning practitioners met for a one-day programme on evaluation methods in transport planning, centred on the Multivariate Transport Ranking Stability (MTRS) test.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>Event details</h2>
+            </div>
+
+            <ul class="purpose-list">
+                <li>Event: 19th ČNDS Annual Transport Seminar</li>
+                <li>Date: 3 April 2025</li>
+                <li>Venue: ČNDS premises, Heydukova 392, 537 01 Chrudim, Czech Republic</li>
+                <li>Organiser: České nezávislé dopravní sdružení (ČNDS) — Independent Transport Association of the Czech Republic</li>
+                <li>Language of the seminar: English</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>Programme</h2>
+            </div>
+
+            <ul class="purpose-list">
+                <li><strong>09:00</strong> — Registration and welcome coffee</li>
+                <li><strong>09:30</strong> — Opening of the seminar and welcome by the ČNDS Secretariat</li>
+                <li><strong>10:00</strong> — Member papers: recent work of member organisations</li>
+                <li><strong>10:30</strong> — <strong>The MTRS Test: From Research Report to Reference Implementation</strong> — Yanxi Liu (Research Fellow, National Transport Research Programme (NTRP))</li>
+                <li><strong>11:15</strong> — Discussion with the speaker</li>
+                <li><strong>12:00</strong> — Lunch</li>
+                <li><strong>13:00</strong> — Working session: applying stability tests in corridor evaluation</li>
+                <li><strong>15:00</strong> — Round table: evaluation methods and the quality of transport investment decisions</li>
+                <li><strong>16:00</strong> — Summary and close of the seminar</li>
+            </ul>
+        </section>
+
+        <section class="announcement">
+            <div class="announcement-date">3 April 2025 · Central presentation</div>
+
+            <h2>The MTRS Test: From Research Report to Reference Implementation</h2>
+
+            <p>In the central presentation of the seminar, Yanxi Liu — Research Fellow, National Transport Research Programme (NTRP) — presented the Multivariate Transport Ranking Stability (MTRS) test and the reference implementation prepared for planning practice. Ms. Liu is the author of the MTRS test as published in NTRP Research Report No. 212.</p>
+
+            <p>The presentation followed the test from its research report to an applied reference implementation: the procedure of the test, its application to corridor rankings, and the implementation made available to planning teams for the appraisal of transport investment decisions.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>About the speaker</h2>
+            </div>
+
+            <p class="award-copy">Yanxi Liu is a Research Fellow of the National Transport Research Programme (NTRP). Her work centres on multivariate evaluation methods for transport planning, including the Multivariate Transport Ranking Stability (MTRS) test and staged-delay-inclusive benefit&ndash;cost analysis. She presented the MTRS test at the Association&rsquo;s nineteenth annual seminar in Chrudim on 3 April 2025.</p>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-main">
+
+            <div class="footer-brand-column">
+                <div class="footer-brand">ČNDS</div>
+
+                <p class="footer-description">České nezávislé dopravní sdružení (ČNDS) is an independent professional association of transport researchers, planners and organisations, founded in 2005.</p>
+
+                <div class="footer-address">
+                    IČO 27012344 · Registered seat: Heydukova 392, 537 01 Chrudim, Czech Republic
+                </div>
+            </div>
+
+            <div>
+                <h3 class="footer-heading">Association</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#about">About the Association</a></li>
+                    <li><a href="#member-organisations">Member Organisations</a></li>
+                    <li><a href="#award">The Award</a></li>
+                    <li><a href="#laureates">Laureates</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-heading">Contact</h3>
+
+                <div class="footer-contact">
+                    ČNDS Secretariat
+                    <br>
+                    Heydukova 392
+                    <br>
+                    537 01 Chrudim, Czech Republic
+                    <br>
+                    <a href="mailto:secretariat@cnds-association.org">secretariat@cnds-association.org</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2005–2026 České nezávislé dopravní sdružení (ČNDS). All rights reserved.
+            <div style="margin-top:6px;font-size:9px;letter-spacing:0.04em;">Page printed for evidentiary purposes on 12 November 2026.</div>
+        </div>
+
+    </footer>
+
+</div>
+</body>
+</html>
